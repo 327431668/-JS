@@ -1,0 +1,93 @@
+html {
+    color: aliceblue;
+    font-size: 32px;
+    overflow: hidden;
+}
+
+.number {
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    user-select: none;
+}
+
+.bgImg {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+.holeBox {
+    position: relative;
+    bottom: -50px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 70px 180px;
+    height: 100vh;
+}
+
+.MinBox {
+    position: relative;
+}
+
+.hole {
+    position: relative;
+    background-image: url(./img/树洞.png);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+}
+
+.SS {
+    background-image: url(./img/地树.png);
+    background-size: 100% 100%;
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    top: -80px;
+    left: 50px;
+    z-index: 1;
+    transition: transform 0.5s ease;
+}
+
+.bang {
+    content: " ";
+    position: absolute;
+    background-image: url(./img/电击棒.png);
+    background-size: 100% 100%;
+    width: 132px;
+    height: 80px;
+    left: 50px;
+    top: -40px;
+    transform-origin: right bottom;
+    animation: dian 0.1s;
+}
+
+/* 电棍动画 */
+@keyframes dian {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/* 蜀黍出现动画 */
+.show {
+    animation: going 0.3s;
+}
+
+@keyframes going {
+    0% {
+        transform: translateY(80px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+};
+
